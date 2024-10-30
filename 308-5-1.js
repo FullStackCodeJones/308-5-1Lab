@@ -1,3 +1,6 @@
+//=================PART ONE====================================================
+
+
 //1. Sum of Array of Numbers=========================
 
 function sumArray(numbers) {
@@ -18,7 +21,31 @@ function getAverage(array) {
 }
 console.log(getAverage(array));
 
-//3. Longest Strings and Return The Longest Array==============
+//3. Take an Array of Strings and Return the Longest String======================================
+
+let family = ["Shawn", "Randi", "LeVan", "LeAnni", "Lael", "Lehana", "ChristopherJR"];
+let longestName = findLongestString(family);
+function findLongestString(arr) {
+    let longest = "";
+    if (arr.length === 0) {
+        return null;
+    }
+
+
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i].length > longest.length) {
+            longest = arr[i];
+        }
+    }
+
+    return longest;
+}
+console.log(longestName);
+
+
+
+//4. Longest Strings and Return The Longest Array Return an Array Strings Longer than the Given Number  ==============
 
 let names = ["Shawn", "Randi", "LeVan", "LeAnni", "Lael", "Lehana", "ChristopherJR"];
 let minLength = 3;
@@ -30,3 +57,20 @@ for (let i = 0; i < names.length; i++) {
     }
 }
 console.log(result)
+
+//
+
+function printNumbers(n, current = 1) {
+
+    if (current > n) {
+        return;
+    }
+
+    console.log(current);
+
+    printNumbers(n, current + 1);
+}
+
+
+let n = 5;
+printNumbers(n);
