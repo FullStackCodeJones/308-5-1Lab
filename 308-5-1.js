@@ -58,7 +58,7 @@ for (let i = 0; i < names.length; i++) {
 }
 console.log(result)
 
-//
+// 5/6 IDK anymore, I spent an hour thinking my code was wrong because I forgot to save 🤕
 
 function printNumbers(n, current = 1) {
 
@@ -74,3 +74,21 @@ function printNumbers(n, current = 1) {
 
 let n = 5;
 printNumbers(n);
+//PART TWO================================
+
+// Given data
+const data = [
+    { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+    { id: "48", name: "Barry", occupation: "Runner", age: "25" },
+    { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
+    { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
+    { id: "7", name: "Bilbo", occupation: "None", age: "111" }
+];
+
+
+const sortedByAge = data.sort((a, b) => {
+    return Number(a.age) - Number(b.age); 
+});
+
+
+console.log(sortedByAge);
