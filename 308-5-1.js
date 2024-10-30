@@ -87,8 +87,11 @@ const data = [
 
 
 const sortedByAge = data.sort((a, b) => {
-    return Number(a.age) - Number(b.age); 
+    return Number(a.age) - Number(b.age);
 });
 
 
 console.log(sortedByAge);
+
+const underFifty = data.filter(person => Number(person.age) <= 50);
+console.log(underFifty);
