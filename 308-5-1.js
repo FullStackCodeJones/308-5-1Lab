@@ -20,17 +20,13 @@ console.log(getAverage(array));
 
 //3. Longest Strings and Return The Longest Array==============
 
-function findLongestString(arr) {
-    if (arr.length === 0) return null;
-  
-    let longest = arr[0];
-  
-    for (let i = 1; i < arr.length; i++) {
-      if (arr[i].length > longest.length) {
-        longest = arr[i];
-      }
+let names = ["Shawn", "Randi", "LeVan", "LeAnni", "Lael", "Lehana", "ChristopherJR"];
+let minLength = 3;
+let result = [];
+
+for (let i = 0; i < names.length; i++) {
+    if (names[i].length > minLength) {
+        result.push(names[i]);
     }
-    
-    return longest;
-  }
-  console.log(findLongestString(["cat", "tiger", "elephant"]));
+}
+console.log(result)
