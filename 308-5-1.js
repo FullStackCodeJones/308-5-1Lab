@@ -76,7 +76,7 @@ let n = 5;
 printNumbers(n);
 //PART TWO================================
 
-// Given data
+// Given Data
 const data = [
     { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
     { id: "48", name: "Barry", occupation: "Runner", age: "25" },
@@ -84,7 +84,7 @@ const data = [
     { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
     { id: "7", name: "Bilbo", occupation: "None", age: "111" }
 ];
-
+//Sort The Array By Age===============
 
 const sortedByAge = data.sort((a, b) => {
     return Number(a.age) - Number(b.age);
@@ -93,5 +93,55 @@ const sortedByAge = data.sort((a, b) => {
 
 console.log(sortedByAge);
 
+//Filter The Array By Age=============================
 const underFifty = data.filter(person => Number(person.age) <= 50);
 console.log(underFifty);
+
+//Map the Array===========================
+
+// Map the array to change "occupation" to "job" and increment "age" by 1=========================
+
+
+const updatedData = data.map(person => ({
+    id: person.id,
+    name: person.name,
+    job: person.occupation,
+    age: Number(person.age) + 1
+}));
+
+
+console.log(updatedData);
+
+
+//Reduce Method to Calculate Age==============================
+
+
+const totalAge = data.reduce((sum, person) => {
+    return sum + Number(person.age);
+}, 0);
+
+
+const averageAge = totalAge / data.length;
+
+console.log(`Total Age: ${totalAge}`);
+let randisFamily = [
+    { name: "Shawn", age: 36 },
+    { name: "Randi", age: 36 },
+    { name: "Le'Van", age: 18 },
+    { name: "Le'Anni", age: 16 },
+    { name: "La'el", age: 11 },
+    { name: "Lehana", age: 6 },
+    { name: "ChristopherJR", age: 3 }
+];
+
+randisFamily.forEach(person => {
+    person.age += 1;
+});
+
+console.log(randisFamily);
+console.log(`Average Age: ${averageAge}`);
+
+//PART 3============================================================================
+
+
+console.log(randisFamily)
