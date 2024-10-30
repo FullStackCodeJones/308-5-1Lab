@@ -113,7 +113,7 @@ const updatedData = data.map(person => ({
 console.log(updatedData);
 
 
-//Reduce Method to Calculate Age==============================
+
 
 
 const totalAge = data.reduce((sum, person) => {
@@ -134,6 +134,7 @@ let randisFamily = [
     { name: "ChristopherJR", age: 3 }
 ];
 
+
 randisFamily.forEach(person => {
     person.age += 1;
 });
@@ -141,7 +142,50 @@ randisFamily.forEach(person => {
 console.log(randisFamily);
 console.log(`Average Age: ${averageAge}`);
 
-//PART 3============================================================================
+//============================================================
+function incrementAge(person) {
+  
+    let personCopy = { ...person };
+
+  
+    if (typeof personCopy.age === "number") {
+        personCopy.age += 1;
+    }function incrementAge(person) {
+        
+        let personCopy = { ...person }; 
+        if (typeof personCopy.age === "number") {
+            personCopy.age += 1;
+        }
+    
+        
+        return personCopy;
+    }
+    //=====================================================
+    let randiFamily = {
+        name: "Randi",
+        age: 36
+    };
+    
+    
+    let updatedFamilyMember = incrementAge(randiFamily);
+    
+    
+    console.log(updatedFamilyMember); 
+    console.log(randiFamily);
+    
+
+    return personCopy;
+}
 
 
-console.log(randisFamily)
+let randiFamily = {
+    name: "Randi",
+    age: 36
+};
+
+
+let updatedFamilyMember = incrementAge(randiFamily);
+
+
+console.log(updatedFamilyMember); 
+
